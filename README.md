@@ -30,7 +30,7 @@ self.follower = [Follower new];
 [self.follower resumeRouteTracking]
 .
 .
-// some time later...
+// Some time later when they're done...
 [self.follower endRouteTracking];
 ```
 
@@ -39,6 +39,7 @@ That was easy... Now what?
 ## Map Polyline / Region
 
 ```objective-c
+// Add their route to a MKMapView and center it properly.
 [self.mapView addOverlay:self.follower.routePolyline];
 [self.mapView setRegion:self.follower.routeRegion animated:YES];
 ```
@@ -56,17 +57,19 @@ That was easy... Now what?
 ## Speed
 
 ```objective-c
+// Get their averge speed...
 [self.follower averageSpeedWithUnit:SpeedUnitMetersPerSecond]; // 26.8224...
 [self.follower averageSpeedWithUnit:SpeedUnitKilometersPerHour]; // 96.560...
 [self.follower averageSpeedWithUnit:SpeedUnitMilesPerHour]; // 60.0
 
-// Same speed options above
+// Get their top speed...
 [self.follower topSpeedWithUnit:...];
 ```
 
 ## Distance
 
 ```objective-c
+// Get the total distance traveled...
 [self.follower totalDistanceWithUnit:DistanceUnitMeters]; // 1000.0
 [self.follower totalDistanceWithUnit:DistanceUnitKilometers]; // 1.0
 [self.follower totalDistanceWithUnit:DistanceUnitFeet]; // 3280.8399...
@@ -76,7 +79,7 @@ That was easy... Now what?
 ## Altitude
 
 ```objective-c
-// Same unit options as above
+// Get their average, minimum, and maximum altitudes...
 [self.follower averageAltitudeWithUnit:...];
 [self.follower minimumAltitudeWithUnit:...];
 [self.follower maximumAltitudeWithUnit:...];
@@ -88,7 +91,7 @@ Implement the following (optional) `FollowerDelegate` method, and set yourself a
 
 ```objective-c
 - (void)followerDidUpdate:(Follower *)follower {
-	// Get all of the same above information here...
+	// Get all of the same above information here and do whatever you want with it!
 }
 ```
 
