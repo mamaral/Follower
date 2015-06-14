@@ -13,7 +13,7 @@
 
 ## How easy is it to use?
 
-Perhaps your a fitness app, and you want to track the route information for a user on their daily mountain ride...
+Perhaps you're a fitness app, and you want to track the route information for a user on their daily mountain ride...
 
 ```objective-c
 // Create your follower, and tell it to start route tracking.
