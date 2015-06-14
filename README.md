@@ -1,5 +1,5 @@
 
-##Follower
+##Follower *beta*
 
 ### Track location, distance, speed, duration, and elevation like a boss.
 
