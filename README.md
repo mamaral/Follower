@@ -21,7 +21,6 @@ self.follower = [Follower new];
 [self.follower beginRouteTracking];
 .
 .
-.
 // Maybe they want to pause their workout so they can stop for a drink...
 [self.follower pauseRouteTracking]
 .
